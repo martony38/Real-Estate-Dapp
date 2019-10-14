@@ -623,7 +623,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 contract ERC721Mintable is
     ERC721Metadata("testName", "testSymbol", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/")
 {
-    function mint(address to, uint256 tokenId, string memory tokenURI)
+    function mint(address to, uint256 tokenId/*, string memory tokenURI */)
         public
         onlyOwner
         returns (bool)

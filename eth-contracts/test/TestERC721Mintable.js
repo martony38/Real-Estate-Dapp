@@ -10,11 +10,11 @@ contract("TestERC721Mintable", accounts => {
       this.contract = await ERC721Mintable.new({ from: account_one });
 
       // TODO: mint multiple tokens
-      await this.contract.mint(account_one, 1, "tokenURI_1");
-      await this.contract.mint(account_one, 2, "tokenURI_2");
-      await this.contract.mint(account_one, 3, "tokenURI_3");
-      await this.contract.mint(account_two, 4, "tokenURI_4");
-      await this.contract.mint(account_two, 5, "tokenURI_5");
+      await this.contract.mint(account_one, 1/*, "tokenURI_1"*/);
+      await this.contract.mint(account_one, 2/*, "tokenURI_2"*/);
+      await this.contract.mint(account_one, 3/*, "tokenURI_3"*/);
+      await this.contract.mint(account_two, 4/*, "tokenURI_4"*/);
+      await this.contract.mint(account_two, 5/*, "tokenURI_5"*/);
     });
 
     it("should return total supply", async function() {
@@ -60,7 +60,7 @@ contract("TestERC721Mintable", accounts => {
     it("should fail when minting when address is not contract owner", async function() {
       let reason
       try {
-        await this.contract.mint(account_one, 1, "tokenURI_1", {from: account_two});
+        await this.contract.mint(account_one, 1/*, "tokenURI_1"*/, {from: account_two});
       } catch (error) {
         reason = error.reason
       }
