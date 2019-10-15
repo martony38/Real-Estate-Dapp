@@ -5,7 +5,7 @@ import "./ERC721Mintable.sol";
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
 
-contract SquareVerifier {
+contract SquareVerifierInterface {
   function verifyTx(
     uint256[2] memory,
     uint256[2][2] memory,
@@ -31,10 +31,10 @@ contract SolnSquareVerifier is ERC721Mintable {
     address from;
   }
 
-  SquareVerifier squareVerifier;
+  SquareVerifierInterface squareVerifier;
 
   constructor(address verifier) public {
-    squareVerifier = SquareVerifier(verifier);
+    squareVerifier = SquareVerifierInterface(verifier);
   }
 
   // TODO define an array of the above struct
