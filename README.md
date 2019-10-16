@@ -1,19 +1,39 @@
-# Udacity Blockchain Capstone
+# Real Estate Dapp
 
-The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product.
+This project is a decentralized house listing service that creates ERC721 tokens representing real estate properties after verification using the zk-SNARKs toolbox from [ZoKrates](https://github.com/Zokrates/ZoKrates). The tokens can be exchanged on the blockchain market place [OpenSea](https://docs.opensea.io/).
 
-# Project Resources
+## Prerequisites
 
-* [Remix - Solidity IDE](https://remix.ethereum.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Truffle Framework](https://truffleframework.com/)
-* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
-* [Open Zeppelin ](https://openzeppelin.org/)
-* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
-* [Docker](https://docs.docker.com/install/)
-* [ZoKrates](https://github.com/Zokrates/ZoKrates)
+You will need the following things properly installed on your computer.
 
-# Deploy Log
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (with npm)
+- [Truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation)
+- [Ganache CLI](https://github.com/trufflesuite/ganache-cli/blob/master/README.md)
+
+## Installation
+
+- `git clone` this repository
+- `npm install`
+
+## Tests
+
+- `truffle test` to run the tests suite
+
+## Deploy Contracts
+
+- `truffle compile --all` to compile contracts
+- `truffle migrate --reset --network rinkeby` to deploy to rinkeby network
+
+## Mint tokens
+
+- `npm run mint` to mint 10 tokens
+
+## OpenSea Marketplace
+
+- Navigate to `https://rinkeby.opensea.io/assets/<asset_contract_address>/<token_id>` to sell and buy the tokens
+
+## Deploy Log
 ```
 Starting migrations...
 ======================
@@ -90,3 +110,23 @@ Summary
 > Total deployments:   3
 > Final cost:          0.12015522 ETH
 ```
+
+## OpenSea Marketplace Transactions
+
+- [0x66b3caca469d2db6d35a073f9d1923d829bec3bdb3ca82a4de9773defae74f14](https://rinkeby.etherscan.io/tx/0x66b3caca469d2db6d35a073f9d1923d829bec3bdb3ca82a4de9773defae74f14)
+- [0x64a5850c82dcbd1cf1a7b9ac4d4bcf98371601352eb3c08fc43689ac99be82ba](https://rinkeby.etherscan.io/tx/0x64a5850c82dcbd1cf1a7b9ac4d4bcf98371601352eb3c08fc43689ac99be82ba)
+- [0x3ee40ca7a67b471688166668611b205eb7a03c111513c42882b58198d00e14fe](https://rinkeby.etherscan.io/tx/0x3ee40ca7a67b471688166668611b205eb7a03c111513c42882b58198d00e14fe)
+- [0x2ec9fb6639b5b851878aea362f8c0eeda1391ff1e2a0599e88a539bad1028c94](https://rinkeby.etherscan.io/tx/0x2ec9fb6639b5b851878aea362f8c0eeda1391ff1e2a0599e88a539bad1028c94)
+- [0x1e0f118a07f4d41be06c3b19f64b6d4a5a590883853505b0fbf09e1ad135fbf4](https://rinkeby.etherscan.io/tx/0x1e0f118a07f4d41be06c3b19f64b6d4a5a590883853505b0fbf09e1ad135fbf4)
+
+
+## Project Resources
+
+* [Remix - Solidity IDE](https://remix.ethereum.org/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Truffle Framework](https://truffleframework.com/)
+* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
+* [Open Zeppelin ](https://openzeppelin.org/)
+* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
+* [Docker](https://docs.docker.com/install/)
+* [ZoKrates](https://github.com/Zokrates/ZoKrates)

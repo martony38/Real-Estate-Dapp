@@ -1,15 +1,14 @@
 {
-  "name": "capstone",
+  "name": "real-estate-dapp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Real Estate Dapp",
   "scripts": {
-    "dev": "lite-server",
+    "mint": "node scripts/mint.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write eth-contracts/contracts/ERC721Mintable.sol"
   },
   "keywords": [],
-  "author": "pk <pkrasam@gmail.com> (https://ipfs.infura.io/ipfs/QmSXiR9Khm3yo1J67nUopvVBxFJ8YGN2fUGZ34Etr3m92x/)",
+  "author": "Laurent Sehabiague <martony@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@truffle/hdwallet-provider": "^1.0.21",
