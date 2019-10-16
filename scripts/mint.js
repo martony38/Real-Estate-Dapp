@@ -11,6 +11,13 @@ const NFT_CONTRACT_ADDRESS = "0xBa1121Bc120eF6690198992E8b8F65D30d06E2a1";
 const OWNER_ADDRESS = "0xF61728bB526AcA8fe211982dAA0F22b97B0B964A";
 const NUM_TOKENS = 5;
 
+async function sendTx(method, params, opts) {
+  // Estimate gas cost of transaction then set the gas limit to 1.1 that
+  // amount.
+  const estimatedGas = await method(...params).estimateGas(opts);
+  return await method(...params).send({ ...opts, gas: estimatedGas });
+}
+
 async function main() {
   const provider = new HDWalletProvider(
     MNEMONIC,
@@ -19,15 +26,18 @@ async function main() {
   const web3Instance = new web3(provider);
   const nftContract = new web3Instance.eth.Contract(
     NFT_ABI,
-    NFT_CONTRACT_ADDRESS,
-    { gasLimit: "1000000" }
+    NFT_CONTRACT_ADDRESS
   );
 
   // Creatures issued directly to the owner.
   for (var i = 0; i < NUM_TOKENS; i++) {
-    const result = await nftContract.methods
-      .mint(OWNER_ADDRESS, solutions[i], i + 1)
-      .send({ from: OWNER_ADDRESS });
+    const result = await sendTx(
+      nftContract.methods.mint,
+      [OWNER_ADDRESS, solutions[i], i + 1],
+      {
+        from: OWNER_ADDRESS
+      }
+    );
     console.log("Minted token. Transaction: " + result.transactionHash);
   }
 }
