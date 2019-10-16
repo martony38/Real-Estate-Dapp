@@ -9,7 +9,7 @@ const MNEMONIC =
   "word put entry swing range summer father obtain other idle arrest tortoise";
 const NFT_CONTRACT_ADDRESS = "0xBa1121Bc120eF6690198992E8b8F65D30d06E2a1";
 const OWNER_ADDRESS = "0xF61728bB526AcA8fe211982dAA0F22b97B0B964A";
-const NUM_TOKENS = 5;
+const NUM_TOKENS = 10;
 
 async function sendTx(method, params, opts) {
   // Estimate gas cost of transaction then set the gas limit to 1.1 that
@@ -31,15 +31,21 @@ async function main() {
 
   // Creatures issued directly to the owner.
   for (var i = 0; i < NUM_TOKENS; i++) {
-    const result = await sendTx(
-      nftContract.methods.mint,
-      [OWNER_ADDRESS, solutions[i], i + 1],
-      {
-        from: OWNER_ADDRESS
-      }
-    );
-    console.log("Minted token. Transaction: " + result.transactionHash);
+    try {
+      const result = await sendTx(
+        nftContract.methods.mint,
+        [OWNER_ADDRESS, solutions[i], i + 1],
+        {
+          from: OWNER_ADDRESS
+        }
+      );
+      console.log("Minted token. Transaction: " + result.transactionHash);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+  process.exit();
 }
 
 main();
