@@ -34,7 +34,7 @@ async function main() {
     try {
       const result = await sendTx(
         nftContract.methods.mint,
-        [OWNER_ADDRESS, solutions[i], i + 1],
+        [OWNER_ADDRESS, solutions[i], i],
         {
           from: OWNER_ADDRESS
         }
