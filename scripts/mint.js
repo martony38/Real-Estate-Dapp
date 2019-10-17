@@ -7,7 +7,7 @@ const {
 const solutions = require("./solutions");
 const MNEMONIC =
   "word put entry swing range summer father obtain other idle arrest tortoise";
-const NFT_CONTRACT_ADDRESS = "0xBa1121Bc120eF6690198992E8b8F65D30d06E2a1";
+const NFT_CONTRACT_ADDRESS = "0x3Ae1B514A4e0aEb051569a147aDc824466A96deB";
 const OWNER_ADDRESS = "0xF61728bB526AcA8fe211982dAA0F22b97B0B964A";
 const NUM_TOKENS = 10;
 
