@@ -65,12 +65,12 @@ contract("SolnSquareVerifier", accounts => {
   });
 
   // Test that a new solution cannot be added if the proof was used previously
-  it("cannot add a new solution and mint a new property if the the solution was used previously", async function() {
+  it("cannot add a new solution and mint a new property if the solution was used previously", async function() {
     const initialSupply = await this.contract.totalSupply();
     const initialBalance = await this.contract.balanceOf(account_two);
 
     await truffleAssert.fails(
-      this.contract.mint(account_two, solutions[0], 1),
+      this.contract.mint(account_two, solutions[0], 0),
       truffleAssert.ErrorType.REVERT,
       "Solution is not unique"
     );
@@ -93,7 +93,7 @@ contract("SolnSquareVerifier", accounts => {
           ...solutions[0],
           input: [4, 1]
         },
-        1
+        6
       ),
       truffleAssert.ErrorType.REVERT,
       "Solution not verified"
@@ -103,5 +103,17 @@ contract("SolnSquareVerifier", accounts => {
     const finalBalance = await this.contract.balanceOf(account_two);
     (finalSupply - initialSupply).should.equal(0);
     (finalBalance - initialBalance).should.equal(0);
+  });
+
+  it("cannot add a new solution and mint a new property if the address is not valid", async function() {
+    await truffleAssert.fails(
+      this.contract.mint(
+        "0x0000000000000000000000000000000000000000",
+        solutions[5],
+        7
+      ),
+      truffleAssert.ErrorType.REVERT,
+      "address is invalid"
+    );
   });
 });

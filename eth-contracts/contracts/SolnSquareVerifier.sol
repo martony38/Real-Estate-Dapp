@@ -53,7 +53,7 @@ contract SolnSquareVerifier is ERC721Mintable {
     address from
   ) private {
     bytes32 solutionKey = keccak256(abi.encodePacked(solution.a, solution.b, solution.c, solution.input));
-    require(solutions[solutionKey].tokenId == 0, "Solution is not unique");
+    require(solutions[solutionKey].from == address(0), "Solution is not unique");
     solutions[solutionKey] = Solution({
       proof: solution,
       tokenId: tokenId,
