@@ -621,7 +621,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -calls the superclass mint and setTokenURI functions
 
 contract ERC721Mintable is
-    ERC721Metadata("testName", "testSymbol", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/")
+    ERC721Metadata("Higiezinak", "HGZN", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/")
 {
     function mint(address to, uint256 tokenId/*, string memory tokenURI */)
         public
