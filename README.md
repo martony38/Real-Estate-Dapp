@@ -33,13 +33,19 @@ You will need the following things properly installed on your computer.
 
 - Navigate to `https://rinkeby.opensea.io/assets/<asset_contract_address>/<token_id>` to sell and buy the tokens
 
-## Deploy Log
+## Project Review
+
+### Contract ABI
+
+- After compiling the contracts with `truffle compile --all`, the contract ABI can be found in `eth-contracts/build/contracts/SolnSquareVerifier.json`
+
+### Deploy Log
 ```
 Starting migrations...
 ======================
 > Network name:    'rinkeby'
 > Network id:      4
-> Block gas limit: 0x6ab58f
+> Block gas limit: 0x6aba03
 
 
 1_initial_migration.js
@@ -47,13 +53,13 @@ Starting migrations...
 
    Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0xf9ea4068f27b09547c73a449a3cb7b16e22c891e98968a3e71759ef1ce8e5e66
-   > Blocks: 1            Seconds: 16
-   > contract address:    0x54FC3eE7b9FBE0e0C2280e5cEfb57e330da25420
-   > block number:        5269911
-   > block timestamp:     1571187754
+   > transaction hash:    0x8659eee5a4ff0829d902170a05a3ed8ea16faa6cc4ba83f8d05dd753aff94daf
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x11201feEB01C0213Bc6C921F4cc326cC516f6306
+   > block number:        5280697
+   > block timestamp:     1571349549
    > account:             0xF61728bB526AcA8fe211982dAA0F22b97B0B964A
-   > balance:             2.16548916309999956
+   > balance:             4.90595649409999956
    > gas used:            261393
    > gas price:           20 gwei
    > value sent:          0 ETH
@@ -71,13 +77,13 @@ Starting migrations...
 
    Deploying 'SquareVerifier'
    --------------------------
-   > transaction hash:    0x551f3ec664e111035c18d13faaa85279062a7f1313dc39a86f6c6c2b45279f98
+   > transaction hash:    0xc339ca506cbf04d5a7ca925c92d8a427f607aff263221c91f325f9a3e68d01fa
    > Blocks: 0            Seconds: 12
-   > contract address:    0x663Fb516D37896d449e76Fd7B96761924D433A56
-   > block number:        5269913
-   > block timestamp:     1571187784
+   > contract address:    0xa4a4d2a47D726d680BD95659b3527815028654Bb
+   > block number:        5280699
+   > block timestamp:     1571349579
    > account:             0xF61728bB526AcA8fe211982dAA0F22b97B0B964A
-   > balance:             2.14037712309999956
+   > balance:             4.88084445409999956
    > gas used:            1213579
    > gas price:           20 gwei
    > value sent:          0 ETH
@@ -86,38 +92,51 @@ Starting migrations...
 
    Deploying 'SolnSquareVerifier'
    ------------------------------
-   > transaction hash:    0x261208206310b7d2206f304e648c8de777b5699125eb760a0d6d5f55a5ec9e50
-   > Blocks: 0            Seconds: 12
-   > contract address:    0xBa1121Bc120eF6690198992E8b8F65D30d06E2a1
-   > block number:        5269914
-   > block timestamp:     1571187799
+   > transaction hash:    0x99a4a719b3f2be64b2b3b1488393a2b39d4262acf93873eb0ba070cf16c239ec
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x3Ae1B514A4e0aEb051569a147aDc824466A96deB
+   > block number:        5280700
+   > block timestamp:     1571349594
    > account:             0xF61728bB526AcA8fe211982dAA0F22b97B0B964A
-   > balance:             2.04972134309999956
-   > gas used:            4532789
+   > balance:             4.78979251409999956
+   > gas used:            4552597
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.09065578 ETH
+   > total cost:          0.09105194 ETH
 
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.11492736 ETH
+   > Total cost:          0.11532352 ETH
 
 
 Summary
 =======
 > Total deployments:   3
-> Final cost:          0.12015522 ETH
+> Final cost:          0.12055138 ETH
 ```
+### OpenSea Storefront Links
 
-## OpenSea Marketplace Transactions
+- [Higiezinak #0](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/0)
+- [Higiezinak #1](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/1)
+- [Higiezinak #2](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/2)
+- [Higiezinak #3](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/3)
+- [Higiezinak #4](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/4)
+- [Higiezinak #5](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/5)
+- [Higiezinak #6](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/6)
+- [Higiezinak #7](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/7)
+- [Higiezinak #8](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/8)
+- [Higiezinak #9](https://rinkeby.opensea.io/assets/0x3Ae1B514A4e0aEb051569a147aDc824466A96deB/9)
 
-- [0x66b3caca469d2db6d35a073f9d1923d829bec3bdb3ca82a4de9773defae74f14](https://rinkeby.etherscan.io/tx/0x66b3caca469d2db6d35a073f9d1923d829bec3bdb3ca82a4de9773defae74f14)
-- [0x64a5850c82dcbd1cf1a7b9ac4d4bcf98371601352eb3c08fc43689ac99be82ba](https://rinkeby.etherscan.io/tx/0x64a5850c82dcbd1cf1a7b9ac4d4bcf98371601352eb3c08fc43689ac99be82ba)
-- [0x3ee40ca7a67b471688166668611b205eb7a03c111513c42882b58198d00e14fe](https://rinkeby.etherscan.io/tx/0x3ee40ca7a67b471688166668611b205eb7a03c111513c42882b58198d00e14fe)
-- [0x2ec9fb6639b5b851878aea362f8c0eeda1391ff1e2a0599e88a539bad1028c94](https://rinkeby.etherscan.io/tx/0x2ec9fb6639b5b851878aea362f8c0eeda1391ff1e2a0599e88a539bad1028c94)
-- [0x1e0f118a07f4d41be06c3b19f64b6d4a5a590883853505b0fbf09e1ad135fbf4](https://rinkeby.etherscan.io/tx/0x1e0f118a07f4d41be06c3b19f64b6d4a5a590883853505b0fbf09e1ad135fbf4)
+### OpenSea Marketplace Transactions
+
+- [0x83f744e83e39ba5cf5a44b7f3a5b22b1e43358d05cce40e042c192564f6dd62b](https://rinkeby.etherscan.io/tx/0x83f744e83e39ba5cf5a44b7f3a5b22b1e43358d05cce40e042c192564f6dd62b)
+- [0x944d9cdc636438ee0e94e0b1ff365ee3f1c54b4cda28c681c84caf2a8d4b8078](https://rinkeby.etherscan.io/tx/0x944d9cdc636438ee0e94e0b1ff365ee3f1c54b4cda28c681c84caf2a8d4b8078)
+- [0x2308bed5ccb34a7b825f011e1202462bbdd6018a7b57435afa91eac6c8ff17d0](https://rinkeby.etherscan.io/tx/0x2308bed5ccb34a7b825f011e1202462bbdd6018a7b57435afa91eac6c8ff17d0)
+- [0x01d3a7bc21d13f317c5adaa61e049845a5d7096ea5068301b8eb5887f5885556](https://rinkeby.etherscan.io/tx/0x01d3a7bc21d13f317c5adaa61e049845a5d7096ea5068301b8eb5887f5885556)
+- [0x7068799c33ce119e256c852998f3a7e1ac02378384e9ccbedaf20f71457a438c](https://rinkeby.etherscan.io/tx/0x7068799c33ce119e256c852998f3a7e1ac02378384e9ccbedaf20f71457a438c)
+- [0xdef81c6659f6e5a56c289362124581cfbea7c718061cf19b5bf65da66098276f](https://rinkeby.etherscan.io/tx/0xdef81c6659f6e5a56c289362124581cfbea7c718061cf19b5bf65da66098276f)
 
 
 ## Project Resources
